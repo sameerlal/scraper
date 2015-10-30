@@ -1,15 +1,13 @@
-# this is a sample program
+import requests
+from bs4 import BeautifulSoup
 
+page = requests.get("http://xkcd.com/1").content
+soup = BeautifulSoup(page)
 
-#initiate framework here
+comicImageBlock = soup.find("div", {"id":"comic"})
 
+comicImageTag = comicImageBlock.find("img")
+comicURL = comicImageTag['src']
 
-#scraper function here
-
-#scraper helper function here
-
-
-#print here
-
-#security framework here
+print comicURL
 
