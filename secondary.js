@@ -1,6 +1,7 @@
+
 function logarithm(){
 } 
-function SAMEERBot(){
+function theBot(){
 	var i = 0;
 	while(i<100){
 	var hi = document.getElementsByName("yop_poll_answer[2]");
@@ -8,8 +9,9 @@ function SAMEERBot(){
 	var button = document.getElementsByClassName("yop_poll_vote_button")[0].click();
 	location.reload();
 	i++
-	window.setTimeout(logarithm, 20);
+	// Errors encountered at 20 ms delay. Sent 3% of requests to server.
+	window.setTimeout(logarithm, 30);
 	}
 }
-SAMEERBot();
+theBot();
 
